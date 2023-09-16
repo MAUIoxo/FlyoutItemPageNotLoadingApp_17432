@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlyoutItemPageNotLoadingApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:FlyoutItemPageNotLoadingApp.Pages"
+    Shell.FlyoutBehavior="Flyout">
+
+    
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="150">
+            <Image Source="radiant_gradient.png" Aspect="AspectFill"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    
+
+    <FlyoutItem FlyoutIcon="dotnet_bot.png" Title="MainPage" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Icon="dotnet_bot.png" Title="MainPage" ContentTemplate="{DataTemplate pages:MainPage}" Route="MainPage" Shell.PresentationMode="Animated" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutIcon="dotnet_bot.png" Title="Settings" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Icon="dotnet_bot.png" Title="Settings" ContentTemplate="{DataTemplate pages:Settings}" Route="Settings" Shell.PresentationMode="Animated" />
+    </FlyoutItem>
+
+    <FlyoutItem FlyoutIcon="dotnet_bot.png" Title="Help" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Icon="dotnet_bot.png" Title="Help" ContentTemplate="{DataTemplate pages:Help}" Route="Help" Shell.PresentationMode="Animated" IsVisible="True"/>
+    </FlyoutItem>
+
+
+
+    <Shell.FlyoutFooter>
+        <Grid HeightRequest="60" BackgroundColor="{StaticResource Gray900}">
+            <Label TextColor="White" Text="Copyright ..." HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </Shell.FlyoutFooter>
+
+
+</Shell>
